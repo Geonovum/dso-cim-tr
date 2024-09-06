@@ -1,16 +1,16 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 34.1.4">
+<meta name="generator" content="ReSpec 35.1.1">
 <style>
 dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
-.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
-.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
 .dfn-panel *{margin:0}
-.dfn-panel b{display:block;color:#000;margin-top:.25em}
-.dfn-panel ul a[href]{color:#333}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
 .dfn-panel>div{display:flex}
 .dfn-panel a.self-link{font-weight:700;margin-right:auto}
 .dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
@@ -48,8 +48,6 @@ div.imageinfo.overview img {max-width: none;}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -63,20 +61,8 @@ a.bibref{text-decoration:none}
 cite .bibref{font-style:normal}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
-a .figno,a .secno{color:#000}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -195,6 +181,7 @@ DSO.">
       "cv": "Candidate recommendation",
       "vv": "Proposed recommendation",
       "def": "Recommendation",
+      "ld": "Living document",
       "basis": "Document",
       "no": "Norm",
       "st": "Standard",
@@ -211,6 +198,7 @@ DSO.">
       "cv": "Consultatieversie",
       "vv": "Versie ter vaststelling",
       "def": "Vastgestelde versie",
+      "ld": "Levend document",
       "basis": "Document",
       "no": "Norm",
       "st": "Standaard",
@@ -230,7 +218,8 @@ DSO.">
       "wv": "Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.",
       "cv": "Dit is een consultatieversie. Commentaar over dit document kan gestuurd worden naar ",
       "vv": "Dit is de definitieve conceptversie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
-      "basis": "Dit is een document zonder officiële status."
+      "basis": "Dit is een document zonder officiële status.",
+      "ld": "Dit is een levend document dat regelmatig gewijzigd wordt."
     },
     "en": {
       "sotd": "Status of this document",
@@ -238,7 +227,8 @@ DSO.">
       "wv": "This is a working draft that can be changed, removed or replaced by other documents at any time. It is not a stable document.",
       "cv": "This is a stable draft, published for public comment. Comments regarding this document may be sent to ",
       "vv": "This is the final draft of this document. Edits resulting from consultations have been applied.",
-      "basis": "This document has no official standing."
+      "basis": "This document has no official standing.",
+      "ld": "This is a living document, which is updated regularly."
     }
   },
   "labelColor": {
@@ -246,7 +236,8 @@ DSO.">
     "wv": "#FF0000",
     "cv": "#045D9F",
     "vv": "#045D9F",
-    "basis": "#80CC28"
+    "basis": "#80CC28",
+    "ld": "#80CC28"
   },
   "licenses": {
     "cc0": {
@@ -313,6 +304,7 @@ DSO.">
   "title": "Conceptueel Informatiemodel Toepasbare Regels",
   "specStatus": "wv",
   "specType": "IM",
+  "nl_organisationStylesURL": "https://tools.geostandaarden.nl/respec/style/",
   "pubDomain": "dso",
   "licence": "cc-by",
   "shortName": "dso-cim-tr",
@@ -338,7 +330,7 @@ DSO.">
     }
   ]
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
+<link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/base.css"></head>
 
 <body class="h-entry toc-inline"><div class="head">
     <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132">
@@ -347,7 +339,7 @@ DSO.">
     <h2>
       Geonovum Informatiemodel<br>
       Werkversie
-      <time class="dt-published" datetime="2023-12-07">07 december 2023</time>
+      <time class="dt-published" datetime="2024-09-06">06 september 2024</time>
     </h2>
     <dl>
       
@@ -563,7 +555,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Geoverwijzing">
          <div class="header-wrapper"><h4 id="x5-10-1-geoverwijzing"><bdi class="secno">5.10.1 </bdi>   Geoverwijzing</h4><a class="self-link" href="#global_class_CIMTR_Geoverwijzing" aria-label="Permalink for Section 5.10.1"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -593,7 +585,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_Geoverwijzing" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -622,7 +614,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Geoverwijzing" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -653,7 +645,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Conclusie">
          <div class="header-wrapper"><h4 id="x5-10-2-conclusie"><bdi class="secno">5.10.2 </bdi>   Conclusie</h4><a class="self-link" href="#global_class_CIMTR_Conclusie" aria-label="Permalink for Section 5.10.2"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -694,7 +686,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-0">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_Conclusie" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -723,7 +715,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-0">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Conclusie" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -762,7 +754,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_RegisterbevragingAPIProfiel">
          <div class="header-wrapper"><h4 id="x5-10-3-registerbevraging-api-profiel"><bdi class="secno">5.10.3 </bdi>   Registerbevraging API-profiel</h4><a class="self-link" href="#global_class_CIMTR_RegisterbevragingAPIProfiel" aria-label="Permalink for Section 5.10.3"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -804,7 +796,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-1">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_RegisterbevragingAPIProfiel" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -833,7 +825,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-1">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_RegisterbevragingAPIProfiel" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -865,7 +857,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_ToepasbareRegel">
          <div class="header-wrapper"><h4 id="x5-10-4-toepasbare-regel"><bdi class="secno">5.10.4 </bdi>   Toepasbare regel</h4><a class="self-link" href="#global_class_CIMTR_ToepasbareRegel" aria-label="Permalink for Section 5.10.4"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -897,7 +889,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-2">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_ToepasbareRegel" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -927,7 +919,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_ToepasbareActiviteit">
          <div class="header-wrapper"><h4 id="x5-10-5-toepasbare-activiteit"><bdi class="secno">5.10.5 </bdi>   Toepasbare activiteit</h4><a class="self-link" href="#global_class_CIMTR_ToepasbareActiviteit" aria-label="Permalink for Section 5.10.5"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -956,7 +948,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-2">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_ToepasbareActiviteit" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -1015,7 +1007,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-3">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_ToepasbareActiviteit" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1129,7 +1121,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Conversieregel">
          <div class="header-wrapper"><h4 id="x5-10-6-conversieregel"><bdi class="secno">5.10.6 </bdi>   Conversieregel</h4><a class="self-link" href="#global_class_CIMTR_Conversieregel" aria-label="Permalink for Section 5.10.6"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1159,7 +1151,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-4">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Conversieregel" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1193,7 +1185,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Feit">
          <div class="header-wrapper"><h4 id="x5-10-7-feit"><bdi class="secno">5.10.7 </bdi>   Feit</h4><a class="self-link" href="#global_class_CIMTR_Feit" aria-label="Permalink for Section 5.10.7"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1220,7 +1212,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-5">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Feit" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1250,7 +1242,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Uitvoeringsregel">
          <div class="header-wrapper"><h4 id="x5-10-8-uitvoeringsregel"><bdi class="secno">5.10.8 </bdi>   Uitvoeringsregel</h4><a class="self-link" href="#global_class_CIMTR_Uitvoeringsregel" aria-label="Permalink for Section 5.10.8"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1279,7 +1271,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-6">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Uitvoeringsregel" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1341,7 +1333,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_UitkomstHerbruikbareBeslissing">
          <div class="header-wrapper"><h4 id="x5-10-9-uitkomst-herbruikbare-beslissing"><bdi class="secno">5.10.9 </bdi>   Uitkomst herbruikbare beslissing</h4><a class="self-link" href="#global_class_CIMTR_UitkomstHerbruikbareBeslissing" aria-label="Permalink for Section 5.10.9"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1389,7 +1381,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-3">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_UitkomstHerbruikbareBeslissing" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -1428,7 +1420,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-7">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_UitkomstHerbruikbareBeslissing" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1459,7 +1451,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Bedrijfsregel">
          <div class="header-wrapper"><h4 id="x5-10-10-bedrijfsregel"><bdi class="secno">5.10.10 </bdi>   Bedrijfsregel</h4><a class="self-link" href="#global_class_CIMTR_Bedrijfsregel" aria-label="Permalink for Section 5.10.10"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1491,7 +1483,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-8">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Bedrijfsregel" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1539,7 +1531,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_ImplicietAntwoord">
          <div class="header-wrapper"><h4 id="x5-10-11-impliciet-antwoord"><bdi class="secno">5.10.11 </bdi>   Impliciet antwoord</h4><a class="self-link" href="#global_class_CIMTR_ImplicietAntwoord" aria-label="Permalink for Section 5.10.11"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1567,7 +1559,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-4">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_ImplicietAntwoord" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -1616,7 +1608,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-9">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_ImplicietAntwoord" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1647,7 +1639,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Bijlagedefinitie">
          <div class="header-wrapper"><h4 id="x5-10-12-bijlagedefinitie"><bdi class="secno">5.10.12 </bdi>   Bijlagedefinitie</h4><a class="self-link" href="#global_class_CIMTR_Bijlagedefinitie" aria-label="Permalink for Section 5.10.12"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1688,7 +1680,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-5">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_Bijlagedefinitie" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -1727,7 +1719,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-10">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Bijlagedefinitie" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1757,7 +1749,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Indieningsvereiste">
          <div class="header-wrapper"><h4 id="x5-10-13-indieningsvereiste"><bdi class="secno">5.10.13 </bdi>   Indieningsvereiste</h4><a class="self-link" href="#global_class_CIMTR_Indieningsvereiste" aria-label="Permalink for Section 5.10.13"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1776,7 +1768,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Invoergegeven">
          <div class="header-wrapper"><h4 id="x5-10-14-invoergegeven"><bdi class="secno">5.10.14 </bdi>   Invoergegeven</h4><a class="self-link" href="#global_class_CIMTR_Invoergegeven" aria-label="Permalink for Section 5.10.14"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1803,7 +1795,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-11">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Invoergegeven" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1847,7 +1839,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_RegisterbevragingGGS">
          <div class="header-wrapper"><h4 id="x5-10-15-registerbevraging-ggs"><bdi class="secno">5.10.15 </bdi>   Registerbevraging GGS</h4><a class="self-link" href="#global_class_CIMTR_RegisterbevragingGGS" aria-label="Permalink for Section 5.10.15"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -1891,7 +1883,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-6">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_RegisterbevragingGGS" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -1950,7 +1942,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-12">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_RegisterbevragingGGS" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -1982,7 +1974,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Vraagdefinitie">
          <div class="header-wrapper"><h4 id="x5-10-16-vraagdefinitie"><bdi class="secno">5.10.16 </bdi>   Vraagdefinitie</h4><a class="self-link" href="#global_class_CIMTR_Vraagdefinitie" aria-label="Permalink for Section 5.10.16"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2010,7 +2002,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-13">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Vraagdefinitie" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2041,7 +2033,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_MaatregelenOpMaat">
          <div class="header-wrapper"><h4 id="x5-10-17-maatregelen-op-maat"><bdi class="secno">5.10.17 </bdi>   Maatregelen op maat</h4><a class="self-link" href="#global_class_CIMTR_MaatregelenOpMaat" aria-label="Permalink for Section 5.10.17"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2082,7 +2074,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-7">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_MaatregelenOpMaat" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -2111,7 +2103,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-14">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_MaatregelenOpMaat" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2150,7 +2142,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Interactieregel">
          <div class="header-wrapper"><h4 id="x5-10-18-interactieregel"><bdi class="secno">5.10.18 </bdi>   Interactieregel</h4><a class="self-link" href="#global_class_CIMTR_Interactieregel" aria-label="Permalink for Section 5.10.18"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2181,7 +2173,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-15">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Interactieregel" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2215,7 +2207,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Aansluitpunt">
          <div class="header-wrapper"><h4 id="x5-10-19-aansluitpunt"><bdi class="secno">5.10.19 </bdi>   Aansluitpunt</h4><a class="self-link" href="#global_class_CIMTR_Aansluitpunt" aria-label="Permalink for Section 5.10.19"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2247,7 +2239,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-16">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Aansluitpunt" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2305,7 +2297,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Werkzaamheid">
          <div class="header-wrapper"><h4 id="x5-10-20-werkzaamheid"><bdi class="secno">5.10.20 </bdi>   Werkzaamheid</h4><a class="self-link" href="#global_class_CIMTR_Werkzaamheid" aria-label="Permalink for Section 5.10.20"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2332,7 +2324,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-8">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_Werkzaamheid" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -2361,7 +2353,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-17">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Werkzaamheid" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2405,7 +2397,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Registerbevraging">
          <div class="header-wrapper"><h4 id="x5-10-21-registerbevraging"><bdi class="secno">5.10.21 </bdi>   Registerbevraging</h4><a class="self-link" href="#global_class_CIMTR_Registerbevraging" aria-label="Permalink for Section 5.10.21"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2434,7 +2426,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-9">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_Registerbevraging" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -2463,7 +2455,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-18">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Registerbevraging" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2494,7 +2486,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Indieningsvereisten">
          <div class="header-wrapper"><h4 id="x5-10-22-indieningsvereisten"><bdi class="secno">5.10.22 </bdi>   Indieningsvereisten</h4><a class="self-link" href="#global_class_CIMTR_Indieningsvereisten" aria-label="Permalink for Section 5.10.22"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2538,7 +2530,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-19">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Indieningsvereisten" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2619,7 +2611,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Indienbaar">
          <div class="header-wrapper"><h4 id="x5-10-23-indienbaar"><bdi class="secno">5.10.23 </bdi>   Indienbaar</h4><a class="self-link" href="#global_class_CIMTR_Indienbaar" aria-label="Permalink for Section 5.10.23"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2659,7 +2651,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-10">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_Indienbaar" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -2688,7 +2680,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-20">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Indienbaar" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2741,7 +2733,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_ToepasbareRegelset">
          <div class="header-wrapper"><h4 id="x5-10-24-toepasbare-regelset"><bdi class="secno">5.10.24 </bdi>   Toepasbare Regelset</h4><a class="self-link" href="#global_class_CIMTR_ToepasbareRegelset" aria-label="Permalink for Section 5.10.24"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2769,7 +2761,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-21">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_ToepasbareRegelset" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2841,7 +2833,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Uitkomst">
          <div class="header-wrapper"><h4 id="x5-10-25-uitkomst"><bdi class="secno">5.10.25 </bdi>   Uitkomst</h4><a class="self-link" href="#global_class_CIMTR_Uitkomst" aria-label="Permalink for Section 5.10.25"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2878,7 +2870,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-22">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Uitkomst" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -2908,7 +2900,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_VasteWaarde">
          <div class="header-wrapper"><h4 id="x5-10-26-vaste-waarde"><bdi class="secno">5.10.26 </bdi>   Vaste waarde</h4><a class="self-link" href="#global_class_CIMTR_VasteWaarde" aria-label="Permalink for Section 5.10.26"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -2934,7 +2926,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-11">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_VasteWaarde" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -2983,7 +2975,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-23">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_VasteWaarde" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -3014,7 +3006,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Grondslag">
          <div class="header-wrapper"><h4 id="x5-10-27-grondslag"><bdi class="secno">5.10.27 </bdi>   Grondslag</h4><a class="self-link" href="#global_class_CIMTR_Grondslag" aria-label="Permalink for Section 5.10.27"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -3041,7 +3033,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-24">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Grondslag" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -3085,7 +3077,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Regelbeheerobject">
          <div class="header-wrapper"><h4 id="x5-10-28-regelbeheerobject"><bdi class="secno">5.10.28 </bdi>   Regelbeheerobject</h4><a class="self-link" href="#global_class_CIMTR_Regelbeheerobject" aria-label="Permalink for Section 5.10.28"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -3126,7 +3118,7 @@ dataspecificatie.</p>
          
          <div class="header-wrapper"><h5 id="overzicht-attributen-12">Overzicht attributen  </h5><a class="self-link" href="#global_class_CIMTR_Regelbeheerobject" aria-label="Permalink for this Section"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 10%;"></colgroup>
@@ -3165,7 +3157,7 @@ dataspecificatie.</p>
          <div class="header-wrapper"><h5 id="overzicht-relaties-25">Overzicht relaties  </h5><a class="self-link" href="#global_class_CIMTR_Regelbeheerobject" aria-label="Permalink for this Section"></a></div>
          
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 50%;"></colgroup>
             <colgroup style="width: 50%;"></colgroup>
             <tbody>
@@ -3212,7 +3204,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_ToestemmingTypering">
          <div class="header-wrapper"><h4 id="x5-11-1-referentielijst-toestemming-typering"><bdi class="secno">5.11.1 </bdi>Referentielijst   Toestemming­Typering</h4><a class="self-link" href="#global_class_CIMTR_ToestemmingTypering" aria-label="Permalink for Section 5.11.1"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -3236,7 +3228,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Afnamepunt">
          <div class="header-wrapper"><h4 id="x5-12-1-primitief-datatype-afnamepunt"><bdi class="secno">5.12.1 </bdi>Primitief datatype   Afnamepunt</h4><a class="self-link" href="#global_class_CIMTR_Afnamepunt" aria-label="Permalink for Section 5.12.1"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -3251,7 +3243,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Maatregel">
          <div class="header-wrapper"><h4 id="x5-12-2-primitief-datatype-maatregel"><bdi class="secno">5.12.2 </bdi>Primitief datatype   Maatregel</h4><a class="self-link" href="#global_class_CIMTR_Maatregel" aria-label="Permalink for Section 5.12.2"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -3276,7 +3268,7 @@ dataspecificatie.</p>
       <section id="global_class_CIMTR_Identificatie">
          <div class="header-wrapper"><h4 id="x5-12-3-primitief-datatype-identificatie"><bdi class="secno">5.12.3 </bdi>Primitief datatype   Identificatie</h4><a class="self-link" href="#global_class_CIMTR_Identificatie" aria-label="Permalink for Section 5.12.3"></a></div>
          
-         <table style="width: 100%;" class="simple">
+         <table style="width: 100%;">
             <colgroup style="width: 30%;"></colgroup>
             <colgroup style="width: 70%;"></colgroup>
             <tbody>
@@ -3291,7 +3283,7 @@ dataspecificatie.</p>
    <section id="enumeraties">
       <div class="header-wrapper"><h3 id="x5-13-enumeraties"><bdi class="secno">5.13 </bdi>Enumeraties   </h3><a class="self-link" href="#enumeraties" aria-label="Permalink for Section 5.13"></a></div>
       
-      <table style="width: 100%;" class="simple">
+      <table style="width: 100%;">
          <colgroup style="width: 30%;"></colgroup>
          <colgroup style="width: 70%;"></colgroup>
          <tbody>
@@ -3338,7 +3330,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_Geoverwijzing_locatie">
                <div class="header-wrapper"><h6 id="x5-14-1-1-1-attribuutsoort-details-geoverwijzing-locatie"><bdi class="secno">5.14.1.1.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_Geoverwijzing">Geoverwijzing</a> locatie</h6><a class="self-link" href="#detail_attribute_CIMTR_Geoverwijzing_locatie" aria-label="Permalink for Section 5.14.1.1.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3392,7 +3384,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_Conclusie_toestemmingen">
                <div class="header-wrapper"><h6 id="x5-14-1-2-1-attribuutsoort-details-conclusie-toestemmingen"><bdi class="secno">5.14.1.2.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_Conclusie">Conclusie</a> toestemmingen</h6><a class="self-link" href="#detail_attribute_CIMTR_Conclusie_toestemmingen" aria-label="Permalink for Section 5.14.1.2.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3433,7 +3425,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_RegisterbevragingAPIProfiel_afnamepunt">
                <div class="header-wrapper"><h6 id="x5-14-1-3-1-attribuutsoort-details-registerbevraging-api-profiel-afnamepunt"><bdi class="secno">5.14.1.3.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_RegisterbevragingAPIProfiel">Registerbevraging API-profiel</a> afnamepunt</h6><a class="self-link" href="#detail_attribute_CIMTR_RegisterbevragingAPIProfiel_afnamepunt" aria-label="Permalink for Section 5.14.1.3.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3488,7 +3480,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_ToepasbareActiviteit_typering">
                <div class="header-wrapper"><h6 id="x5-14-1-4-1-attribuutsoort-details-toepasbare-activiteit-typering"><bdi class="secno">5.14.1.4.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_ToepasbareActiviteit">Toepasbare activiteit</a> typering</h6><a class="self-link" href="#detail_attribute_CIMTR_ToepasbareActiviteit_typering" aria-label="Permalink for Section 5.14.1.4.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3521,7 +3513,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_ToepasbareActiviteit_verfijnbaar">
                <div class="header-wrapper"><h6 id="x5-14-1-4-2-attribuutsoort-details-toepasbare-activiteit-verfijnbaar"><bdi class="secno">5.14.1.4.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_ToepasbareActiviteit">Toepasbare activiteit</a> verfijnbaar</h6><a class="self-link" href="#detail_attribute_CIMTR_ToepasbareActiviteit_verfijnbaar" aria-label="Permalink for Section 5.14.1.4.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3554,7 +3546,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_ToepasbareActiviteit_magneet">
                <div class="header-wrapper"><h6 id="x5-14-1-4-3-attribuutsoort-details-toepasbare-activiteit-magneet"><bdi class="secno">5.14.1.4.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_ToepasbareActiviteit">Toepasbare activiteit</a> magneet</h6><a class="self-link" href="#detail_attribute_CIMTR_ToepasbareActiviteit_magneet" aria-label="Permalink for Section 5.14.1.4.3"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3587,7 +3579,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_ToepasbareActiviteit_toonbaar">
                <div class="header-wrapper"><h6 id="x5-14-1-4-4-attribuutsoort-details-toepasbare-activiteit-toonbaar"><bdi class="secno">5.14.1.4.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_ToepasbareActiviteit">Toepasbare activiteit</a> toonbaar</h6><a class="self-link" href="#detail_attribute_CIMTR_ToepasbareActiviteit_toonbaar" aria-label="Permalink for Section 5.14.1.4.4"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3620,7 +3612,7 @@ dataspecificatie.</p>
             <section id="detail_association_CIMTR_ToepasbareActiviteit_isEen">
                <div class="header-wrapper"><h6 id="x5-14-1-4-5-externe-koppeling-details-toepasbare-activiteit-is-een"><bdi class="secno">5.14.1.4.5 </bdi>Externe koppeling details  <a href="#global_class_CIMTR_ToepasbareActiviteit">Toepasbare activiteit</a> is (een)</h6><a class="self-link" href="#detail_association_CIMTR_ToepasbareActiviteit_isEen" aria-label="Permalink for Section 5.14.1.4.5"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3641,7 +3633,7 @@ dataspecificatie.</p>
             <section id="detail_association_CIMTR_ToepasbareActiviteit_valtImplicietBinnen">
                <div class="header-wrapper"><h6 id="x5-14-1-4-6-externe-koppeling-details-toepasbare-activiteit-valt-impliciet-binnen"><bdi class="secno">5.14.1.4.6 </bdi>Externe koppeling details  <a href="#global_class_CIMTR_ToepasbareActiviteit">Toepasbare activiteit</a> valt impliciet binnen</h6><a class="self-link" href="#detail_association_CIMTR_ToepasbareActiviteit_valtImplicietBinnen" aria-label="Permalink for Section 5.14.1.4.6"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3663,7 +3655,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-4-7-relatiesoort-details-toepasbare-activiteit-is-van"><bdi class="secno">5.14.1.4.7 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_ToepasbareActiviteit">Toepasbare activiteit</a> is van</h6><a class="self-link" href="#detail_association_CIMTR_ToepasbareActiviteit_isVan" aria-label="Permalink for Section 5.14.1.4.7"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3689,7 +3681,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-4-8-relatiesoort-details-toepasbare-activiteit-krijgt-doel-middels"><bdi class="secno">5.14.1.4.8 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_ToepasbareActiviteit">Toepasbare activiteit</a> krijgt doel middels</h6><a class="self-link" href="#detail_association_CIMTR_ToepasbareActiviteit_krijgtDoelMiddels" aria-label="Permalink for Section 5.14.1.4.8"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3715,7 +3707,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-4-9-relatiesoort-details-toepasbare-activiteit-heeft"><bdi class="secno">5.14.1.4.9 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_ToepasbareActiviteit">Toepasbare activiteit</a> heeft</h6><a class="self-link" href="#detail_association_CIMTR_ToepasbareActiviteit_heeft" aria-label="Permalink for Section 5.14.1.4.9"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3741,7 +3733,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-4-10-relatiesoort-details-toepasbare-activiteit-heeft-recht-tot"><bdi class="secno">5.14.1.4.10 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_ToepasbareActiviteit">Toepasbare activiteit</a> heeft recht tot</h6><a class="self-link" href="#detail_association_CIMTR_ToepasbareActiviteit_heeftRechtTot" aria-label="Permalink for Section 5.14.1.4.10"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3772,7 +3764,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-5-1-relatiesoort-details-feit-vereist"><bdi class="secno">5.14.1.5.1 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_Feit">Feit</a> vereist</h6><a class="self-link" href="#detail_association_CIMTR_Feit_vereist" aria-label="Permalink for Section 5.14.1.5.1"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3802,7 +3794,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_UitkomstHerbruikbareBeslissing_naam">
                <div class="header-wrapper"><h6 id="x5-14-1-6-1-attribuutsoort-details-uitkomst-herbruikbare-beslissing-naam"><bdi class="secno">5.14.1.6.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_UitkomstHerbruikbareBeslissing">Uitkomst herbruikbare beslissing</a> naam</h6><a class="self-link" href="#detail_attribute_CIMTR_UitkomstHerbruikbareBeslissing_naam" aria-label="Permalink for Section 5.14.1.6.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3852,7 +3844,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_UitkomstHerbruikbareBeslissing_urnToepasbaresActiviteit">
                <div class="header-wrapper"><h6 id="x5-14-1-6-2-attribuutsoort-details-uitkomst-herbruikbare-beslissing-urn-toepasbares-activiteit"><bdi class="secno">5.14.1.6.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_UitkomstHerbruikbareBeslissing">Uitkomst herbruikbare beslissing</a> urn (toepasbares activiteit)</h6><a class="self-link" href="#detail_attribute_CIMTR_UitkomstHerbruikbareBeslissing_urnToepasbaresActiviteit" aria-label="Permalink for Section 5.14.1.6.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3907,7 +3899,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-7-1-relatiesoort-details-bedrijfsregel-beslist-op-basis-van"><bdi class="secno">5.14.1.7.1 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_Bedrijfsregel">Bedrijfsregel</a> beslist op basis van</h6><a class="self-link" href="#detail_association_CIMTR_Bedrijfsregel_beslistOpBasisVan" aria-label="Permalink for Section 5.14.1.7.1"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3936,7 +3928,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_ImplicietAntwoord_waarde">
                <div class="header-wrapper"><h6 id="x5-14-1-8-1-attribuutsoort-details-impliciet-antwoord-waarde"><bdi class="secno">5.14.1.8.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_ImplicietAntwoord">Impliciet antwoord</a> waarde</h6><a class="self-link" href="#detail_attribute_CIMTR_ImplicietAntwoord_waarde" aria-label="Permalink for Section 5.14.1.8.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -3986,7 +3978,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_ImplicietAntwoord_werkzaamheidReferentie">
                <div class="header-wrapper"><h6 id="x5-14-1-8-2-attribuutsoort-details-impliciet-antwoord-werkzaamheid-referentie"><bdi class="secno">5.14.1.8.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_ImplicietAntwoord">Impliciet antwoord</a> werkzaamheid (referentie)</h6><a class="self-link" href="#detail_attribute_CIMTR_ImplicietAntwoord_werkzaamheidReferentie" aria-label="Permalink for Section 5.14.1.8.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4029,7 +4021,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_ImplicietAntwoord_context">
                <div class="header-wrapper"><h6 id="x5-14-1-8-3-attribuutsoort-details-impliciet-antwoord-context"><bdi class="secno">5.14.1.8.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_ImplicietAntwoord">Impliciet antwoord</a> context</h6><a class="self-link" href="#detail_attribute_CIMTR_ImplicietAntwoord_context" aria-label="Permalink for Section 5.14.1.8.3"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4083,7 +4075,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_Bijlagedefinitie_bijlageType">
                <div class="header-wrapper"><h6 id="x5-14-1-9-1-attribuutsoort-details-bijlagedefinitie-bijlage-type"><bdi class="secno">5.14.1.9.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_Bijlagedefinitie">Bijlagedefinitie</a> bijlage­Type</h6><a class="self-link" href="#detail_attribute_CIMTR_Bijlagedefinitie_bijlageType" aria-label="Permalink for Section 5.14.1.9.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4133,7 +4125,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_Bijlagedefinitie_documenttype">
                <div class="header-wrapper"><h6 id="x5-14-1-9-2-attribuutsoort-details-bijlagedefinitie-documenttype"><bdi class="secno">5.14.1.9.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_Bijlagedefinitie">Bijlagedefinitie</a> documenttype</h6><a class="self-link" href="#detail_attribute_CIMTR_Bijlagedefinitie_documenttype" aria-label="Permalink for Section 5.14.1.9.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4189,7 +4181,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-10-1-relatiesoort-details-invoergegeven-komt-voort-uit"><bdi class="secno">5.14.1.10.1 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_Invoergegeven">Invoergegeven</a> komt voort uit</h6><a class="self-link" href="#detail_association_CIMTR_Invoergegeven_komtVoortUit" aria-label="Permalink for Section 5.14.1.10.1"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4218,7 +4210,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_RegisterbevragingGGS_gegevensType">
                <div class="header-wrapper"><h6 id="x5-14-1-11-1-attribuutsoort-details-registerbevraging-ggs-gegevens-type"><bdi class="secno">5.14.1.11.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_RegisterbevragingGGS">Registerbevraging GGS</a> gegevens­Type</h6><a class="self-link" href="#detail_attribute_CIMTR_RegisterbevragingGGS_gegevensType" aria-label="Permalink for Section 5.14.1.11.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4268,7 +4260,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_RegisterbevragingGGS_register">
                <div class="header-wrapper"><h6 id="x5-14-1-11-2-attribuutsoort-details-registerbevraging-ggs-register"><bdi class="secno">5.14.1.11.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_RegisterbevragingGGS">Registerbevraging GGS</a> register</h6><a class="self-link" href="#detail_attribute_CIMTR_RegisterbevragingGGS_register" aria-label="Permalink for Section 5.14.1.11.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4318,7 +4310,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_RegisterbevragingGGS_registergegeven">
                <div class="header-wrapper"><h6 id="x5-14-1-11-3-attribuutsoort-details-registerbevraging-ggs-registergegeven"><bdi class="secno">5.14.1.11.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_RegisterbevragingGGS">Registerbevraging GGS</a> registergegeven</h6><a class="self-link" href="#detail_attribute_CIMTR_RegisterbevragingGGS_registergegeven" aria-label="Permalink for Section 5.14.1.11.3"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4368,7 +4360,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_RegisterbevragingGGS_registerkoppelveld">
                <div class="header-wrapper"><h6 id="x5-14-1-11-4-attribuutsoort-details-registerbevraging-ggs-registerkoppelveld"><bdi class="secno">5.14.1.11.4 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_RegisterbevragingGGS">Registerbevraging GGS</a> registerkoppelveld</h6><a class="self-link" href="#detail_attribute_CIMTR_RegisterbevragingGGS_registerkoppelveld" aria-label="Permalink for Section 5.14.1.11.4"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4423,7 +4415,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_MaatregelenOpMaat_maatregelen">
                <div class="header-wrapper"><h6 id="x5-14-1-12-1-attribuutsoort-details-maatregelen-op-maat-maatregelen"><bdi class="secno">5.14.1.12.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_MaatregelenOpMaat">Maatregelen op maat</a> maatregelen</h6><a class="self-link" href="#detail_attribute_CIMTR_MaatregelenOpMaat_maatregelen" aria-label="Permalink for Section 5.14.1.12.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4479,7 +4471,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_Werkzaamheid_trefwoorden">
                <div class="header-wrapper"><h6 id="x5-14-1-13-1-attribuutsoort-details-werkzaamheid-trefwoorden"><bdi class="secno">5.14.1.13.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_Werkzaamheid">Werkzaamheid</a> trefwoorden</h6><a class="self-link" href="#detail_attribute_CIMTR_Werkzaamheid_trefwoorden" aria-label="Permalink for Section 5.14.1.13.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4530,7 +4522,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-13-2-relatiesoort-details-werkzaamheid-leidt-tot"><bdi class="secno">5.14.1.13.2 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_Werkzaamheid">Werkzaamheid</a> leidt tot</h6><a class="self-link" href="#detail_association_CIMTR_Werkzaamheid_leidtTot" aria-label="Permalink for Section 5.14.1.13.2"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4556,7 +4548,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-13-3-relatiesoort-details-werkzaamheid-logisch-gerelateerd"><bdi class="secno">5.14.1.13.3 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_Werkzaamheid">Werkzaamheid</a> logisch gerelateerd</h6><a class="self-link" href="#detail_association_CIMTR_Werkzaamheid_logischGerelateerd" aria-label="Permalink for Section 5.14.1.13.3"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4585,7 +4577,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_Registerbevraging_verborgenstruurvraag">
                <div class="header-wrapper"><h6 id="x5-14-1-14-1-attribuutsoort-details-registerbevraging-verborgenstruurvraag"><bdi class="secno">5.14.1.14.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_Registerbevraging">Registerbevraging</a> verborgenstruurvraag</h6><a class="self-link" href="#detail_attribute_CIMTR_Registerbevraging_verborgenstruurvraag" aria-label="Permalink for Section 5.14.1.14.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4640,7 +4632,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-15-1-relatiesoort-details-indieningsvereisten-hoort-bij"><bdi class="secno">5.14.1.15.1 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_Indieningsvereisten">Indieningsvereisten</a> hoort bij</h6><a class="self-link" href="#detail_association_CIMTR_Indieningsvereisten_hoortBij" aria-label="Permalink for Section 5.14.1.15.1"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4669,7 +4661,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_Indienbaar_compleetEnIndienbaar">
                <div class="header-wrapper"><h6 id="x5-14-1-16-1-attribuutsoort-details-indienbaar-compleet-en-indienbaar"><bdi class="secno">5.14.1.16.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_Indienbaar">Indienbaar</a> compleet­En­Indienbaar</h6><a class="self-link" href="#detail_attribute_CIMTR_Indienbaar_compleetEnIndienbaar" aria-label="Permalink for Section 5.14.1.16.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4720,7 +4712,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-16-2-relatiesoort-details-indienbaar-wordt-bepaald-door"><bdi class="secno">5.14.1.16.2 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_Indienbaar">Indienbaar</a> wordt bepaald door</h6><a class="self-link" href="#detail_association_CIMTR_Indienbaar_wordtBepaaldDoor" aria-label="Permalink for Section 5.14.1.16.2"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4750,7 +4742,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-17-1-relatiesoort-details-toepasbare-regelset-leidt-tot"><bdi class="secno">5.14.1.17.1 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_ToepasbareRegelset">Toepasbare Regelset</a> leidt tot</h6><a class="self-link" href="#detail_association_CIMTR_ToepasbareRegelset_leidtTot" aria-label="Permalink for Section 5.14.1.17.1"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4776,7 +4768,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-17-2-relatiesoort-details-toepasbare-regelset-levert"><bdi class="secno">5.14.1.17.2 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_ToepasbareRegelset">Toepasbare Regelset</a> levert</h6><a class="self-link" href="#detail_association_CIMTR_ToepasbareRegelset_levert" aria-label="Permalink for Section 5.14.1.17.2"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4802,7 +4794,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-17-3-relatiesoort-details-toepasbare-regelset-groepeert"><bdi class="secno">5.14.1.17.3 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_ToepasbareRegelset">Toepasbare Regelset</a> groepeert</h6><a class="self-link" href="#detail_association_CIMTR_ToepasbareRegelset_groepeert" aria-label="Permalink for Section 5.14.1.17.3"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4832,7 +4824,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_VasteWaarde_gegevenstype">
                <div class="header-wrapper"><h6 id="x5-14-1-18-1-attribuutsoort-details-vaste-waarde-gegevenstype"><bdi class="secno">5.14.1.18.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_VasteWaarde">Vaste waarde</a> gegevenstype</h6><a class="self-link" href="#detail_attribute_CIMTR_VasteWaarde_gegevenstype" aria-label="Permalink for Section 5.14.1.18.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4882,7 +4874,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_VasteWaarde_waarde">
                <div class="header-wrapper"><h6 id="x5-14-1-18-2-attribuutsoort-details-vaste-waarde-waarde"><bdi class="secno">5.14.1.18.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_VasteWaarde">Vaste waarde</a> waarde</h6><a class="self-link" href="#detail_attribute_CIMTR_VasteWaarde_waarde" aria-label="Permalink for Section 5.14.1.18.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4932,7 +4924,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_VasteWaarde_voorbehoud">
                <div class="header-wrapper"><h6 id="x5-14-1-18-3-attribuutsoort-details-vaste-waarde-voorbehoud"><bdi class="secno">5.14.1.18.3 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_VasteWaarde">Vaste waarde</a> voorbehoud</h6><a class="self-link" href="#detail_attribute_CIMTR_VasteWaarde_voorbehoud" aria-label="Permalink for Section 5.14.1.18.3"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -4987,7 +4979,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-19-1-relatiesoort-details-grondslag-gebruikt-een"><bdi class="secno">5.14.1.19.1 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_Grondslag">Grondslag</a> gebruikt een</h6><a class="self-link" href="#detail_association_CIMTR_Grondslag_gebruiktEen" aria-label="Permalink for Section 5.14.1.19.1"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -5016,7 +5008,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_Regelbeheerobject_type">
                <div class="header-wrapper"><h6 id="x5-14-1-20-1-attribuutsoort-details-regelbeheerobject-type"><bdi class="secno">5.14.1.20.1 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_Regelbeheerobject">Regelbeheerobject</a> type</h6><a class="self-link" href="#detail_attribute_CIMTR_Regelbeheerobject_type" aria-label="Permalink for Section 5.14.1.20.1"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -5066,7 +5058,7 @@ dataspecificatie.</p>
             <section id="detail_attribute_CIMTR_Regelbeheerobject_href">
                <div class="header-wrapper"><h6 id="x5-14-1-20-2-attribuutsoort-details-regelbeheerobject-href"><bdi class="secno">5.14.1.20.2 </bdi>Attribuutsoort details  <a href="#global_class_CIMTR_Regelbeheerobject">Regelbeheerobject</a> href</h6><a class="self-link" href="#detail_attribute_CIMTR_Regelbeheerobject_href" aria-label="Permalink for Section 5.14.1.20.2"></a></div>
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -5104,7 +5096,7 @@ dataspecificatie.</p>
                <div class="header-wrapper"><h6 id="x5-14-1-20-3-relatiesoort-details-regelbeheerobject-ontsluit"><bdi class="secno">5.14.1.20.3 </bdi>Relatiesoort details  <a href="#global_class_CIMTR_Regelbeheerobject">Regelbeheerobject</a> ontsluit</h6><a class="self-link" href="#detail_association_CIMTR_Regelbeheerobject_ontsluit" aria-label="Permalink for Section 5.14.1.20.3"></a></div>
                
                
-               <table style="width: 100%;" class="simple">
+               <table style="width: 100%;">
                   <colgroup style="width: 30%;"></colgroup>
                   <colgroup style="width: 70%;"></colgroup>
                   <tbody>
@@ -5140,7 +5132,7 @@ dataspecificatie.</p>
    <section id="detail_class_CIMTR_ToestemmingTypering">
       <div class="header-wrapper"><h3 id="x6-1-referentielijst-toestemming-typering"><bdi class="secno">6.1 </bdi>Referentielijst  Toestemming­Typering</h3><a class="self-link" href="#detail_class_CIMTR_ToestemmingTypering" aria-label="Permalink for Section 6.1"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -5155,14 +5147,14 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="simple">
+      <table style="width: 100%;">
          <tbody></tbody>
       </table>
       </section>
    <section id="detail_class_CIMTR_DocumentTypeGeneriek">
       <div class="header-wrapper"><h3 id="x6-2-enumeratie-details-document-type-generiek"><bdi class="secno">6.2 </bdi>Enumeratie details  Document­Type­Generiek</h3><a class="self-link" href="#detail_class_CIMTR_DocumentTypeGeneriek" aria-label="Permalink for Section 6.2"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -5171,7 +5163,7 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup style="width: 40%;"></colgroup>
          <colgroup style="width: 60%;"></colgroup>
          <tbody>
@@ -5269,7 +5261,7 @@ dataspecificatie.</p>
    <section id="detail_class_CIMTR_Typering">
       <div class="header-wrapper"><h3 id="x6-3-enumeratie-details-typering"><bdi class="secno">6.3 </bdi>Enumeratie details  Typering</h3><a class="self-link" href="#detail_class_CIMTR_Typering" aria-label="Permalink for Section 6.3"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -5278,7 +5270,7 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup style="width: 40%;"></colgroup>
          <colgroup style="width: 60%;"></colgroup>
          <tbody>
@@ -5304,7 +5296,7 @@ dataspecificatie.</p>
    <section id="detail_class_CIMTR_Uitkomsttype">
       <div class="header-wrapper"><h3 id="x6-4-enumeratie-details-uitkomsttype"><bdi class="secno">6.4 </bdi>Enumeratie details  Uitkomsttype</h3><a class="self-link" href="#detail_class_CIMTR_Uitkomsttype" aria-label="Permalink for Section 6.4"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -5313,7 +5305,7 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup style="width: 40%;"></colgroup>
          <colgroup style="width: 60%;"></colgroup>
          <tbody>
@@ -5339,7 +5331,7 @@ dataspecificatie.</p>
    <section id="detail_class_CIMTR_Bestuurslaag">
       <div class="header-wrapper"><h3 id="x6-5-enumeratie-details-bestuurslaag"><bdi class="secno">6.5 </bdi>Enumeratie details  Bestuurslaag</h3><a class="self-link" href="#detail_class_CIMTR_Bestuurslaag" aria-label="Permalink for Section 6.5"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -5348,7 +5340,7 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup style="width: 40%;"></colgroup>
          <colgroup style="width: 60%;"></colgroup>
          <tbody>
@@ -5378,7 +5370,7 @@ dataspecificatie.</p>
    <section id="detail_class_CIMTR_Gegevenstype">
       <div class="header-wrapper"><h3 id="x6-6-enumeratie-details-gegevenstype"><bdi class="secno">6.6 </bdi>Enumeratie details  Gegevenstype</h3><a class="self-link" href="#detail_class_CIMTR_Gegevenstype" aria-label="Permalink for Section 6.6"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -5387,7 +5379,7 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup style="width: 40%;"></colgroup>
          <colgroup style="width: 60%;"></colgroup>
          <tbody>
@@ -5421,7 +5413,7 @@ dataspecificatie.</p>
    <section id="detail_class_CIMTR_Register">
       <div class="header-wrapper"><h3 id="x6-7-enumeratie-details-register"><bdi class="secno">6.7 </bdi>Enumeratie details  Register</h3><a class="self-link" href="#detail_class_CIMTR_Register" aria-label="Permalink for Section 6.7"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -5430,7 +5422,7 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup style="width: 40%;"></colgroup>
          <colgroup style="width: 60%;"></colgroup>
          <tbody>
@@ -5448,7 +5440,7 @@ dataspecificatie.</p>
    <section id="detail_class_CIMTR_Context">
       <div class="header-wrapper"><h3 id="x6-8-enumeratie-details-context"><bdi class="secno">6.8 </bdi>Enumeratie details  Context</h3><a class="self-link" href="#detail_class_CIMTR_Context" aria-label="Permalink for Section 6.8"></a></div>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup></colgroup>
          <tbody>
             <tr>
@@ -5457,7 +5449,7 @@ dataspecificatie.</p>
          </tbody>
       </table>
       
-      <table style="width: 100%;" class="list simple">
+      <table style="width: 100%;" class="list">
          <colgroup style="width: 40%;"></colgroup>
          <colgroup style="width: 60%;"></colgroup>
          <tbody>
