@@ -67,8 +67,8 @@ ontwikkel- als publicatieversies verwijzen.
 
 Alhoewel elk conceptueel informatiemodel één informatiedomein afbeeldt, zijn er
 dwarsverbanden en afhankelijkheden tussen de verschillende domeinen. De
-conceptuele informatiemodellen worden derhalve in samenhang beheert en
-ontwikkelt, teneinde de semantische interoperabiliteit in en met het DSO te
+conceptuele informatiemodellen worden derhalve in samenhang beheerd en
+ontwikkeld, teneinde de semantische interoperabiliteit in en met het DSO te
 kunnen waarborgen.
 
 Dit document bevat de vastlegging en beschrijving van het Conceptueel Informatiemodel Toepasbare Regels.
